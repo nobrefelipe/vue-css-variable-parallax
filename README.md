@@ -1,7 +1,7 @@
 # Vue CSS Variables Parallax
 
 Allow to create powerfull parallax effects by using CSS Variables
-When the element gets to the viewport, 
+when the element gets to the viewport, 
 <br>a `--scroll-amount` css variable will be attached to it
 and will be updated by the scrolled amount. <br>
 In the CSS we have a `--multiplier` variable, which will manager the speed and direction
