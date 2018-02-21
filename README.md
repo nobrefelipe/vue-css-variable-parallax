@@ -15,10 +15,26 @@ yarn add vue-custom-properties-parallax
 Import this into your scripts.
 
 ```js
-import 'vue-custom-properties-parallax'
+import CustomPropertiesParallax from 'vue-custom-properties-parallax'
 
 // Using CommonJS
-require('vue-custom-properties-parallax')
+const CustomPropertiesParallax = require('vue-custom-properties-parallax')
+
+Vue.use(CustomPropertiesParallax)
+```
+
+It also exports directive to use locally or in a mixin.
+
+```vue
+<script>
+  import { directive as customPropertiesParallaxDirective } from 'vue-custom-properties-parallax'
+
+  export default {
+    directives: {
+      'custom-properties-parallax': customPropertiesParallaxDirective
+    }
+  }
+</script>
 ```
 
 ## Usage
