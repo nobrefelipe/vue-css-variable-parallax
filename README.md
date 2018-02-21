@@ -7,6 +7,8 @@ In the CSS we have a `--multiplier` variable, which will manager the speed and d
 
 
 ```
+<div v-css-parallax ></div>
+
 img{
   --multiplier: 0.1;
   transform: translateY(calc(var(--scroll-amount) * var(--multiplier) * 1px ));
