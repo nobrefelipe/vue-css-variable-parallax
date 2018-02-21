@@ -7,11 +7,15 @@ and will be updated by the scrolled amount. <br>
 In the CSS we have a `--multiplier` variable, which will manager the speed and direction
 
 
+
+
 ```
 <div v-css-parallax ></div>
 
+// all the logic is mnaged by css
 img{
   --multiplier: 0.1;
+  opacity: calc( 1 - calc(var(--scroll-amount) * 0.002));
   transform: translateY(calc(var(--scroll-amount) * var(--multiplier) * 1px ));
 }
 ```
