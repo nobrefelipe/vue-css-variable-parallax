@@ -2,9 +2,14 @@
   "name": "vue-custom-properties-parallax",
   "version": "0.1.0",
   "description": "Allow to create powerfull parallax effects by using CSS custom properties (variables) handled by element/component.",
-  "main": "vue-custom-properties-parallax.js",
+  "cdn": "dist/vue-custom-properties-parallax.js",
+  "main": "dist/vue-custom-properties-parallax.cjs.js",
+  "unpkg": "dist/vue-custom-properties-parallax.js",
+  "module": "dist/vue-custom-properties-parallax.es.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "bili src/index.js --formats cjs,es,umd",
+    "prepare": "npm run build"
   },
   "repository": {
     "type": "git",
@@ -31,5 +36,8 @@
   "bugs": {
     "url": "https://github.com/nobrefelipe/vue-css-variable-parallax/issues"
   },
-  "homepage": "https://github.com/nobrefelipe/vue-css-variable-parallax#readme"
+  "homepage": "https://github.com/nobrefelipe/vue-css-variable-parallax#readme",
+  "devDependencies": {
+    "bili": "^2.2.7"
+  }
 }
