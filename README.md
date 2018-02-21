@@ -2,6 +2,7 @@
 
 Allow to create powerfull parallax effects by using CSS Variables
 When the element gets to the viewport, 
+
 a `--scroll-amount` css variable will be attached to it
 and will be updated by the scrolled amount.
 In the CSS we have a `--multiplier` variable, which will manager the speed and direction
