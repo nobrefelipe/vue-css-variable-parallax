@@ -7,7 +7,7 @@ Allow to create powerfull parallax effects by using CSS Variables when the eleme
 Install using NPM/Yarn.
 
 ```sh
-npm i vue-custom-properties-parallax
+npm install --save vue-custom-properties-parallax
 
 # Using Yarn
 yarn add vue-custom-properties-parallax
