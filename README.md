@@ -65,6 +65,15 @@ In the CSS we have a `--multiplier` variable, which will manager the speed and d
 </style>
 ```
 
+## Custom Settings
+
+###### Start the parallax only when the elements get to the center of the screen
+
+`<my-element v-css-parallax.center />`
+
+...
+
+
 example: https://codepen.io/nobrefelipe/pen/aqYyOy
 
 inspired by: https://daverupert.com/2018/02/cheapass-parallax/

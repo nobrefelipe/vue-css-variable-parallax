@@ -2,6 +2,10 @@ function directive(el, binding, vnode) {
 
   function setScrollParallax() {
 
+    //[!quick fix]: lets disable on mobile
+    var ww = window.innerWidth;
+    if (ww < 768) { return false; }
+
     // document scrolled amount - parallax container offset from top + window height
     // this make sure to update --scroll-amount only when the elements are in the viewport
     var scroll = document.documentElement.scrollTop - el.offsetTop + window.innerHeight;
@@ -20,7 +24,9 @@ function directive(el, binding, vnode) {
 
 function install(Vue) {
   Vue.directive('css-parallax', {
+
     bind: directive
+
   });
 }
 
