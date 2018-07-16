@@ -1,6 +1,6 @@
 {
   "name": "vue-custom-properties-parallax",
-  "version": "0.2.5",
+  "version": "0.2.6",
   "description": "Allow to create powerfull parallax effects by using CSS custom properties (variables) handled by element/component.",
   "cdn": "dist/vue-custom-properties-parallax.js",
   "main": "dist/vue-custom-properties-parallax.cjs.js",

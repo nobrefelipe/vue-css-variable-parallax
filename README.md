@@ -43,7 +43,7 @@ In the CSS we have a `--multiplier` variable, which will manager the speed and d
 
 ```vue
 <template>
-  <div v-css-parallax class="parallax">
+  <div v-custom-properties-parallax class="parallax">
     <img src="/parallax-image.png" />
   </div>
 </template>
@@ -69,7 +69,7 @@ In the CSS we have a `--multiplier` variable, which will manager the speed and d
 
 ###### Start the parallax only when the elements get to the center of the screen
 
-`<my-element v-css-parallax.center />`
+`<my-element v-custom-properties-parallax.center />`
 
 ...
 
