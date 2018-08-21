@@ -67,9 +67,14 @@ In the CSS we have a `--multiplier` variable, which will manager the speed and d
 
 ## Custom Settings
 
-###### Start the parallax only when the elements get to the center of the screen
+###### Start the parallax only when the elements get to the center of the screen by passing `center` as a modifier
 
 `<my-element v-custom-properties-parallax.center />`
+
+
+###### You can disable `--scroll-amount` on mobile by passing `mobileOff` as an argument if you don't want to perform the effect on small devices
+ 
+ `<my-element v-custom-properties-parallax:mobileOff.center />`
 
 ...
 

@@ -1,15 +1,26 @@
 function directive(el, binding, vnode) {
 
+  const MOBILE_OFF = (binding.arg == "mobileoff") ? true : false;
+  const WINDOW_WIDTH = window.innerWidth;
+
+  // DISABLE ON MOBILE IF ARG `mobileoff` IS SET
+  if(WINDOW_WIDTH < 768 && MOBILE_OFF){
+
+    // do something
+    return false;
+
+  }else{
+
+    window.requestAnimationFrame( setScrollParallax );
+
+  }
+
   function setScrollParallax() {
 
     // SOME SETTINGS HERE
     const FROM_CENTER = binding.modifiers.center;
     // if center modifier is true, we want to start the magic from the middle of the screen
     const WINDOW_POS = FROM_CENTER ? (window.innerHeight / 2) : window.innerHeight;
-
-    //[!quick fix]: lets disable on mobile
-    let ww = window.innerWidth;
-    if(ww < 768) return false;
 
     // document scrolled amount - parallax container offset from top + window height
     // this make sure to update --scroll-amount only when the elements are in the viewport
@@ -22,13 +33,11 @@ function directive(el, binding, vnode) {
     el.style.setProperty("--scroll-amount", scroll);
 
     // global "--scroll-amount" attached to the body
-    document.body.style.setProperty("--scroll-amount", document.documentElement.scrollTop );
+    //document.body.style.setProperty("--scroll-amount", document.documentElement.scrollTop );
 
     window.requestAnimationFrame( setScrollParallax );
 
   }
-
-  window.requestAnimationFrame( setScrollParallax );
 
 }
 
